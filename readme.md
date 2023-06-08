@@ -1,6 +1,6 @@
 # Micro Service
 
-## DEV 
+### Dev 
 install packages : 
 
 ```
@@ -13,7 +13,7 @@ Launch micro services :
 sh start.sh
 ```
 
-## PRODUCTION 
+### Production
 
 Build :
 
