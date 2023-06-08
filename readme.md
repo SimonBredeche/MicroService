@@ -7,7 +7,7 @@ install packages :
 sh install.sh
 ```
 
-Launcher micro services : 
+Launch micro services : 
 
 ```
 sh start.sh
