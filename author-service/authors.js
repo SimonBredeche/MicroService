@@ -10,3 +10,9 @@ export let authors = [
         "id": 2
     }
 ]
+
+export let deleteAuthors = (id) => {
+    authors = authors.filter((entry) => {
+        return entry.id != id;
+    })
+}

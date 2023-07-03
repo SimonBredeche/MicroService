@@ -40,5 +40,15 @@ export let bookService = {
     deleteBook: async(id) => {
         remove(id);
         return await bookService.getAllBooks();
+    },
+    eventBook: async(id) => {
+        let returnElement = null;
+        bookList.forEach((element) => {
+           if(element.author_id == id){
+            element.author_id = null;
+            returnElement = element;
+           } 
+        })
+        return returnElement;
     }
 }

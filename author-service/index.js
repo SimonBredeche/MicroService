@@ -17,6 +17,10 @@ app.get('/author/get/:id', async (req,res) => {
     res.send(JSON.stringify(authorService.getAuthorById(req.params.id)));
 })
 
+app.delete('/author/delete/:id', async(req,res) => {
+   res.send(JSON.stringify(authorService.deleteAuthors(req.params.id))); 
+})
+
 app.listen(port, () => {
     console.log(`Server started on port ${port}`)
 })

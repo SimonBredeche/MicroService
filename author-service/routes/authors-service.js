@@ -1,4 +1,4 @@
-import { authors } from '../authors.js'
+import { authors,deleteAuthors } from '../authors.js'
 
 export const authorService = {
     getAuthorById: (id) => {
@@ -15,5 +15,13 @@ export const authorService = {
             prev.push(auth);
             return prev;
         },[])
+    },
+
+    deleteAuthors: async (id) => {
+        //Call event to update author.
+        await fetch(`http://book_service:4400/book/eventBook/${id}`);
+        deleteAuthors();
+        return authors;
+
     }
 }
